@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Facilities — Vinayak Group of Education, Chomu, Jaipur</title>
+  <meta name="description" content="Explore campus facilities at Vinayak Group — library, science labs, computer lab, sports ground, multipurpose hall, hostel and more in Chomu, Jaipur." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .facility-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+    .facility-detail-grid.reverse { direction: rtl; }
+    .facility-detail-grid.reverse > * { direction: ltr; }
+    .facility-detail-grid:last-child { margin-bottom: 0; }
+    .facility-detail__image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 4/3;
+    }
+    .facility-detail__image img { width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease; }
+    .facility-detail__image:hover img { transform: scale(1.04); }
+    .facility-detail__content .eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;
+      color: var(--gold);margin-bottom: 12px;
+    }
+    .facility-detail__content h2 { margin-bottom: 16px; font-size: 1.9rem; }
+    .facility-detail__content p { margin-bottom: 14px; font-size: 0.97rem; line-height: 1.8; }
+    .facility-list { display:flex;flex-direction:column;gap:10px;margin-top:20px; }
+    .facility-list-item {
+      display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--gray-100);
+    }
+    .facility-list-item:last-child { border-bottom:none; }
+    .fli-icon {
+      width:32px;height:32px;background:var(--gold-pale);border-radius:50%;
+      display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    }
+    .fli-icon svg { width:15px;height:15px;color:var(--gold); }
+    .facility-list-item p { font-size:0.9rem;margin:0;color:var(--gray-600); }
+    .facility-list-item strong { color:var(--navy); }
+    .school-card {
+      background:var(--white);border-radius:var(--radius-md);overflow:hidden;
+      border:1px solid var(--gray-100);box-shadow:var(--shadow-sm);
+    }
+    .school-card__head { background:var(--navy);padding:24px 28px; }
+    .school-card__head .type {
+      font-size:0.72rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;
+      color:var(--gold);display:block;margin-bottom:6px;
+    }
+    .school-card__head h3 { color:var(--white);font-size:1.05rem; }
+    .school-card__body { padding:20px 28px; }
+    .sc-row {
+      display:flex;align-items:center;gap:12px;padding:12px 0;
+      border-bottom:1px solid var(--gray-100);
+    }
+    .sc-row:last-child { border-bottom:none; }
+    .sc-row__icon {
+      width:36px;height:36px;background:var(--navy);border-radius:var(--radius-sm);
+      display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    }
+    .sc-row__icon svg { width:16px;height:16px;color:var(--gold); }
+    .sc-row h4 { font-size:0.88rem;margin-bottom:2px; }
+    .sc-row span { font-size:0.78rem;color:var(--gray-400); }
+    @media(max-width:900px){
+      .facility-detail-grid { grid-template-columns:1fr;gap:32px; }
+      .facility-detail-grid.reverse { direction:ltr; }
+      .schools-row { grid-template-columns:1fr!important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar__inner">
+        <div class="topbar__contact">
+          <a href="tel:+919414247984">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l.37-.3a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +91-9414247984
+          </a>
+          <a href="mailto:vinayakgroup2003@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            vinayakgroup2003@gmail.com
+          </a>
+        </div>
+        <span class="topbar__tagline">Empowering Generations Through Quality Education Since 1995</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo">
+          <div class="navbar__logo-icon"><span>V</span></div>
+          <div class="navbar__logo-text">
+            <span class="name">Vinayak Group</span>
+            <span class="sub">of Education, Chomu</span>
+          </div>
+        </a>
+        <div class="navbar__links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="institutions.html">Institutions</a>
+          <a href="courses.html">Courses</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="facilities.html">Facilities</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
+        </div>
+        <button class="navbar__toggle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="navbar__mobile">
+      <a href="index.html">Home</a><a href="about.html">About</a>
+      <a href="institutions.html">Institutions</a><a href="courses.html">Courses</a>
+      <a href="admissions.html">Admissions</a><a href="facilities.html">Facilities</a>
+      <a href="gallery.html">Gallery</a><a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__inner">
+        <div class="page-hero__breadcrumb">
+          <a href="index.html">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          <span>Facilities</span>
+        </div>
+        <h1>Campus Facilities</h1>
+        <p>Infrastructure designed to support academic excellence, physical development, and holistic student growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW CARDS -->
+  <section class="section-pad-sm bg-off-white">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Infrastructure</span>
+        <h2>Facilities at a Glance</h2>
+        <p>Vinayak Group institutions are equipped with infrastructure that complements academic programmes and supports student wellbeing.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="facilities-grid">
+        <div class="facility-card reveal delay-1">
+          <div class="facility-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          </div>
+          <h3>Library & Reading Room</h3>
+          <p>A well-stocked library with a dedicated reading room for quiet individual study, supporting academic research and exam preparation at Vinayak PG College.</p>
+        </div>
+        <div class="facility-card reveal delay-2">
+          <div class="facility-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3>Science Laboratories</h3>
+          <p>Fully equipped labs supporting practical coursework in Physics, Chemistry, Botany, and Zoology for UG and PG students at Vinayak PG College.</p>
+        </div>
+        <div class="facility-card reveal delay-3">
+          <div class="facility-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Computer Lab</h3>
+          <p>Individual computer systems with internet access enabling students to utilise digital resources and conduct online research at Vinayak PG College.</p>
+        </div>
+        <div class="facility-card reveal delay-1">
+          <div class="facility-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Multipurpose Hall</h3>
+          <p>A spacious hall at Vinayak PG College suitable for seminars, cultural programmes, examinations, orientation events, and institutional gatherings.</p>
+        </div>
+        <div class="facility-card reveal delay-2">
+          <div class="facility-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3>Sports, Yoga & Training</h3>
+          <p>Outdoor sports ground, Yoga sessions, Scout &amp; Guide programmes, and military training at Vinayak PG College for holistic physical development.</p>
+        </div>
+        <div class="facility-card reveal delay-3">
+          <div class="facility-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Boarding Facilities</h3>
+          <p>Residential boarding facilities at both campuses of Vinayak International School providing a safe and structured environment for boarding students.</p>
+        </div>
+        <div class="facility-card reveal delay-1">
+          <div class="facility-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>
+          </div>
+          <h3>Canteen</h3>
+          <p>An on-campus canteen at Vinayak PG College provides students convenient access to food and refreshments during the academic day.</p>
+        </div>
+        <div class="facility-card reveal delay-2">
+          <div class="facility-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Health Centre</h3>
+          <p>Basic medical assistance and first-aid support available on campus at Vinayak PG College for the wellbeing of students and staff.</p>
+        </div>
+        <div class="facility-card reveal delay-3">
+          <div class="facility-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <h3>Online Fee Payment</h3>
+          <p>Vinayak Girls College provides QR-code-based online fee payment on its official website for convenient digital transactions by families.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILED FACILITIES — VINAYAK PG COLLEGE -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Vinayak PG College — In Depth</span>
+        <h2>College Infrastructure Details</h2>
+        <div class="divider"></div>
+      </div>
+
+      <!-- Library -->
+      <div class="facility-detail-grid">
+        <div class="facility-detail__image reveal-left">
+          <!-- Replace with actual library photograph -->
+          <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&auto=format&fit=crop&q=80" alt="Library" />
+        </div>
+        <div class="facility-detail__content reveal-right">
+          <span class="eyebrow">Academic Resources</span>
+          <h2>Library & Reading Room</h2>
+          <p>The college library houses a wide collection of textbooks, reference books, and study materials covering all subjects offered across UG and PG programmes. A dedicated Reading Room provides students with a structured, distraction-free environment for focused study and examination preparation.</p>
+          <div class="facility-list">
+            <div class="facility-list-item">
+              <div class="fli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p><strong>Wide collection</strong> — textbooks, references, journals across Arts, Science and Commerce</p>
+            </div>
+            <div class="facility-list-item">
+              <div class="fli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p><strong>Separate Reading Room</strong> for individual quiet study</p>
+            </div>
+            <div class="facility-list-item">
+              <div class="fli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p>Accessible to all enrolled <strong>UG and PG students</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Laboratories -->
+      <div class="facility-detail-grid reverse">
+        <div class="facility-detail__image reveal-right">
+          <!-- Replace with actual science lab photograph -->
+          <img src="https://images.unsplash.com/photo-1532094349884-543559ba8c25?w=800&auto=format&fit=crop&q=80" alt="Science Laboratory" />
+        </div>
+        <div class="facility-detail__content reveal-left">
+          <span class="eyebrow">Practical Learning</span>
+          <h2>Science Laboratories</h2>
+          <p>The college maintains well-equipped science laboratories that support hands-on practical learning and university-mandated practical examinations. Labs are aligned with the curriculum requirements of the University of Rajasthan for B.Sc. and M.Sc. programmes.</p>
+          <div class="facility-list">
+            <div class="facility-list-item">
+              <div class="fli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p><strong>Physics</strong> lab with standard instruments and apparatus</p>
+            </div>
+            <div class="facility-list-item">
+              <div class="fli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p><strong>Chemistry</strong> lab for both UG and PG practical sessions</p>
+            </div>
+            <div class="facility-list-item">
+              <div class="fli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p><strong>Botany & Zoology</strong> labs supporting all life science programmes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Computer Lab -->
+      <div class="facility-detail-grid">
+        <div class="facility-detail__image reveal-left">
+          <!-- Replace with actual computer lab photograph -->
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&auto=format&fit=crop&q=80" alt="Computer Lab" />
+        </div>
+        <div class="facility-detail__content reveal-right">
+          <span class="eyebrow">Digital Infrastructure</span>
+          <h2>Computer Lab</h2>
+          <p>The computer laboratory is equipped with individual workstations connected to the internet, enabling students to access digital learning platforms, conduct research, submit online forms, and develop computing skills relevant to their academic and professional development.</p>
+          <div class="facility-list">
+            <div class="facility-list-item">
+              <div class="fli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p>Individual computer systems with <strong>internet connectivity</strong></p>
+            </div>
+            <div class="facility-list-item">
+              <div class="fli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p>Supports <strong>online research, digital resources</strong>, and scholarship portal access</p>
+            </div>
+            <div class="facility-list-item">
+              <div class="fli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p>Available to all <strong>UG and PG students</strong> of the college</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sports & Physical -->
+      <div class="facility-detail-grid reverse">
+        <div class="facility-detail__image reveal-right">
+          <!-- Replace with actual sports/yoga photograph -->
+          <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&auto=format&fit=crop&q=80" alt="Sports and Yoga" />
+        </div>
+        <div class="facility-detail__content reveal-left">
+          <span class="eyebrow">Holistic Development</span>
+          <h2>Sports, Yoga & Physical Training</h2>
+          <p>Vinayak PG College integrates physical fitness as a core pillar of student development. Beyond outdoor sports, the college runs structured programmes in Yoga, Scout &amp; Guide training, and military training — instilling discipline, resilience, and physical wellbeing alongside academic achievement.</p>
+          <div class="facility-list">
+            <div class="facility-list-item">
+              <div class="fli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p>Outdoor <strong>sports ground</strong> for group athletics and fitness activities</p>
+            </div>
+            <div class="facility-list-item">
+              <div class="fli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p>Regular <strong>Yoga sessions</strong> for mental and physical wellness</p>
+            </div>
+            <div class="facility-list-item">
+              <div class="fli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p><strong>Scout &amp; Guide</strong> and military training as structured physical programmes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SCHOOL INFRA -->
+  <section class="section-pad bg-off-white">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">School Campuses</span>
+        <h2>School Infrastructure Summary</h2>
+        <p>Verified infrastructure data for all three Vinayak Group school campuses.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="schools-row reveal" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
+
+        <div class="school-card">
+          <div class="school-card__head">
+            <span class="type">Est. 1995 · RBSE · Hindi</span>
+            <h3>Vinayak Vidhya Vihar School</h3>
+          </div>
+          <div class="school-card__body">
+            <div class="sc-row">
+              <div class="sc-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg></div>
+              <div><h4>8 Classrooms</h4><span>All in good condition</span></div>
+            </div>
+            <div class="sc-row">
+              <div class="sc-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+              <div><h4>Pucca Building</h4><span>Private, with pucca boundary wall</span></div>
+            </div>
+            <div class="sc-row">
+              <div class="sc-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+              <div><h4>Electricity & Road Access</h4><span>All-weather motorable road</span></div>
+            </div>
+            <div class="sc-row">
+              <div class="sc-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg></div>
+              <div><h4>DISE Code</h4><span>08120411905</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="school-card">
+          <div class="school-card__head" style="background:var(--navy-mid);">
+            <span class="type">Est. 2005 · CBSE · English</span>
+            <h3>VIS — Khadi Bagh Campus</h3>
+          </div>
+          <div class="school-card__body">
+            <div class="sc-row">
+              <div class="sc-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div>
+              <div><h4>2.29 Acre Campus</h4><span>Spacious school grounds</span></div>
+            </div>
+            <div class="sc-row">
+              <div class="sc-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+              <div><h4>Boarding Facility</h4><span>Day cum boarding school</span></div>
+            </div>
+            <div class="sc-row">
+              <div class="sc-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+              <div><h4>Playgroup to Class XII</h4><span>Complete school journey</span></div>
+            </div>
+            <div class="sc-row">
+              <div class="sc-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg></div>
+              <div><h4>CBSE Affiliation No.</h4><span>1730350</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="school-card">
+          <div class="school-card__head" style="background:var(--navy-dark);">
+            <span class="type">Est. 2018 · CBSE · English</span>
+            <h3>VIS — Kacholiya Road Campus</h3>
+          </div>
+          <div class="school-card__body">
+            <div class="sc-row">
+              <div class="sc-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg></div>
+              <div><h4>4,000 Sq.m Area</h4><span>Modern school campus</span></div>
+            </div>
+            <div class="sc-row">
+              <div class="sc-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+              <div><h4>Boarding Facility</h4><span>Day cum boarding school</span></div>
+            </div>
+            <div class="sc-row">
+              <div class="sc-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg></div>
+              <div><h4>NCC, Scouts & Co-Curricular</h4><span>10+ structured activities</span></div>
+            </div>
+            <div class="sc-row">
+              <div class="sc-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+              <div><h4>Nursery to Class XII</h4><span>Complete school programme</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner">
+        <h2>Experience Our Campus<br />in Person</h2>
+        <p>Schedule a visit to see our facilities first-hand and speak with our admissions team.</p>
+        <div class="cta-banner__actions">
+          <a href="contact.html" class="btn btn-primary">Schedule a Visit</a>
+          <a href="admissions.html" class="btn btn-outline">Apply for Admission</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="navbar__logo">
+            <div class="navbar__logo-icon"><span>V</span></div>
+            <div class="navbar__logo-text">
+              <span class="name">Vinayak Group</span>
+              <span class="sub">of Education, Chomu</span>
+            </div>
+          </a>
+          <p>Empowering generations through quality education since 1995. Chomu, Jaipur, Rajasthan.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <div class="footer__links">
+            <a href="index.html">Home</a><a href="about.html">About Us</a>
+            <a href="institutions.html">Institutions</a><a href="courses.html">Courses</a>
+            <a href="admissions.html">Admissions</a><a href="facilities.html">Facilities</a>
+            <a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Institutions</h4>
+          <div class="footer__links">
+            <a href="institutions.html#inst-1">Vidhya Vihar School</a>
+            <a href="institutions.html#inst-2">VIS Khadi Bagh</a>
+            <a href="institutions.html#inst-3">Vinayak PG College</a>
+            <a href="institutions.html#inst-4">Vinayak Girls College</a>
+            <a href="institutions.html#inst-6">VIS Kacholiya Road</a>
+            <a href="institutions.html#inst-7">B.Ed College</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Vinayak Vihar, Kacholiya Road, Chomu, Jaipur — 303302</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2"/></svg>
+            <a href="tel:+919414247984">+91-9414247984</a>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:vinayakgroup2003@gmail.com">vinayakgroup2003@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom" style="padding:20px 32px;">
+      <p>© 2025 Vinayak Group of Education, Chomu, Jaipur, Rajasthan. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Institutions — Vinayak Group of Education, Chomu, Jaipur</title>
+  <meta name="description" content="Explore all 7 institutions under Vinayak Group — CBSE schools, UG/PG colleges, Girls college, and B.Ed institution in Chomu, Jaipur." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .inst-detail {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-100);
+      margin-bottom: 48px;
+      scroll-margin-top: 96px;
+    }
+    .inst-detail__header {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .inst-detail__header-left { flex: 1; min-width: 200px; }
+    .inst-detail__number {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.1);
+      line-height: 1;
+      display: block;
+      margin-bottom: -10px;
+    }
+    .inst-detail__type {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .inst-detail__header h2 {
+      color: var(--white);
+      font-size: clamp(1.3rem,3vw,1.8rem);
+      margin-bottom: 0;
+    }
+    .inst-detail__est {
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 30px;
+      flex-shrink: 0;
+    }
+    .inst-detail__body {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 0;
+    }
+    .inst-detail__content { padding: 40px 48px; }
+    .inst-detail__image {
+      position: relative;
+      overflow: hidden;
+      min-height: 300px;
+    }
+    .inst-detail__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .inst-detail__meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .inst-meta-box {
+      background: var(--off-white);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      border-left: 3px solid var(--gold);
+    }
+    .inst-meta-box .label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .inst-meta-box .value {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .inst-detail__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    .inst-tag {
+      padding: 5px 14px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: var(--gold-pale);
+      color: var(--gold);
+      border: 1px solid rgba(200,151,26,0.2);
+    }
+    @media(max-width:768px) {
+      .inst-detail__body { grid-template-columns: 1fr; }
+      .inst-detail__image { min-height: 220px; }
+      .inst-detail__content, .inst-detail__header { padding: 24px; }
+      .inst-detail__meta-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar__inner">
+        <div class="topbar__contact">
+          <a href="tel:+919414247984">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l.37-.3a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +91-9414247984
+          </a>
+          <a href="mailto:vinayakgroup2003@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            vinayakgroup2003@gmail.com
+          </a>
+        </div>
+        <span class="topbar__tagline">Empowering Generations Through Quality Education Since 1995</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo">
+          <div class="navbar__logo-icon"><span>V</span></div>
+          <div class="navbar__logo-text">
+            <span class="name">Vinayak Group</span>
+            <span class="sub">of Education, Chomu</span>
+          </div>
+        </a>
+        <div class="navbar__links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="institutions.html">Institutions</a>
+          <a href="courses.html">Courses</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="facilities.html">Facilities</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
+        </div>
+        <button class="navbar__toggle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="navbar__mobile">
+      <a href="index.html">Home</a><a href="about.html">About</a>
+      <a href="institutions.html">Institutions</a><a href="courses.html">Courses</a>
+      <a href="admissions.html">Admissions</a><a href="facilities.html">Facilities</a>
+      <a href="gallery.html">Gallery</a><a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__inner">
+        <div class="page-hero__breadcrumb">
+          <a href="index.html">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          <span>Institutions</span>
+        </div>
+        <h1>Our Institutions</h1>
+        <p>Seven schools and colleges. One integrated group. A complete educational pathway from primary schooling to professional degrees.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTITUTIONS CONTENT -->
+  <section class="section-pad">
+    <div class="container">
+
+      <!-- INSTITUTION 1 -->
+      <div class="inst-detail reveal" id="inst-1">
+        <div class="inst-detail__header">
+          <div class="inst-detail__header-left">
+            <span class="inst-detail__number">01</span>
+            <span class="inst-detail__type">Senior Secondary School · RBSE</span>
+            <h2>Vinayak Vidhya Vihar Senior Secondary School</h2>
+          </div>
+          <span class="inst-detail__est">Est. 1995</span>
+        </div>
+        <div class="inst-detail__body">
+          <div class="inst-detail__content">
+            <p>The founding institution of Vinayak Group, Vinayak Vidhya Vihar Senior Secondary School has been serving the Chomu community since 1995. This co-educational Hindi-medium school provides structured education from pre-primary through Class XII under the Rajasthan Board of Secondary Education.</p>
+            <p style="margin-top:12px;">Managed as a private unaided institution, the school features a pucca building, eight well-maintained classrooms, all-weather road access, and an electricity connection — providing a conducive learning environment for students across all grades.</p>
+            <div class="inst-detail__meta-grid">
+              <div class="inst-meta-box"><span class="label">Board</span><span class="value">RBSE (Rajasthan Board)</span></div>
+              <div class="inst-meta-box"><span class="label">Medium</span><span class="value">Hindi</span></div>
+              <div class="inst-meta-box"><span class="label">Grades</span><span class="value">Pre-Primary to Class XII</span></div>
+              <div class="inst-meta-box"><span class="label">Type</span><span class="value">Co-Educational, Private Unaided</span></div>
+              <div class="inst-meta-box"><span class="label">DISE Code</span><span class="value">08120411905</span></div>
+              <div class="inst-meta-box"><span class="label">Location</span><span class="value">Ward No. 17, Chomu City</span></div>
+            </div>
+            <div class="inst-detail__tags">
+              <span class="inst-tag">RBSE Affiliated</span>
+              <span class="inst-tag">Hindi Medium</span>
+              <span class="inst-tag">Co-Educational</span>
+              <span class="inst-tag">Classes I – XII</span>
+            </div>
+          </div>
+          <div class="inst-detail__image">
+            <!-- Replace with actual school image -->
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700&auto=format&fit=crop&q=80" alt="Vinayak Vidhya Vihar School" />
+          </div>
+        </div>
+      </div>
+
+      <!-- INSTITUTION 2 -->
+      <div class="inst-detail reveal" id="inst-2">
+        <div class="inst-detail__header">
+          <div class="inst-detail__header-left">
+            <span class="inst-detail__number">02</span>
+            <span class="inst-detail__type">CBSE School · English Medium · Day & Boarding</span>
+            <h2>Vinayak International School — Khadi Bagh Campus</h2>
+          </div>
+          <span class="inst-detail__est">Est. 2005</span>
+        </div>
+        <div class="inst-detail__body">
+          <div class="inst-detail__content">
+            <p>Established in 2005 and managed by Vinayak Shri Krishan Sansthan, the Khadi Bagh campus of Vinayak International School is a CBSE-affiliated English-medium co-educational school offering education from Playgroup through Class XII. The campus spans 2.29 acres and provides both day-scholar and boarding options for students.</p>
+            <div class="inst-detail__meta-grid">
+              <div class="inst-meta-box"><span class="label">Board</span><span class="value">CBSE (Affil. No. 1730350)</span></div>
+              <div class="inst-meta-box"><span class="label">Medium</span><span class="value">English</span></div>
+              <div class="inst-meta-box"><span class="label">Grades</span><span class="value">Playgroup to Class XII</span></div>
+              <div class="inst-meta-box"><span class="label">Type</span><span class="value">Co-Ed, Day Cum Boarding</span></div>
+              <div class="inst-meta-box"><span class="label">Campus Area</span><span class="value">2.29 Acres</span></div>
+              <div class="inst-meta-box"><span class="label">Management</span><span class="value">Vinayak Shri Krishan Sansthan</span></div>
+            </div>
+            <div class="inst-detail__tags">
+              <span class="inst-tag">CBSE Affiliated</span>
+              <span class="inst-tag">English Medium</span>
+              <span class="inst-tag">Boarding Available</span>
+              <span class="inst-tag">Playgroup to XII</span>
+            </div>
+          </div>
+          <div class="inst-detail__image">
+            <!-- Replace with actual school image -->
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700&auto=format&fit=crop&q=80" alt="Vinayak International School Khadi Bagh" />
+          </div>
+        </div>
+      </div>
+
+      <!-- INSTITUTION 3 -->
+      <div class="inst-detail reveal" id="inst-3">
+        <div class="inst-detail__header">
+          <div class="inst-detail__header-left">
+            <span class="inst-detail__number">03</span>
+            <span class="inst-detail__type">UG + PG Degree College · Flagship Institution</span>
+            <h2>Vinayak PG College</h2>
+          </div>
+          <span class="inst-detail__est">Est. 2003</span>
+        </div>
+        <div class="inst-detail__body">
+          <div class="inst-detail__content">
+            <p>Vinayak PG College is the Group's flagship higher education institution, offering 18 undergraduate and postgraduate programmes across Arts, Science, and Commerce streams. Affiliated to the University of Rajasthan, Jaipur, the college is equipped with modern facilities and a well-rounded academic environment designed to develop both knowledge and character.</p>
+            <p style="margin-top:12px;">The college also integrates physical wellness through Yoga, Scout & Guide programmes, and military training, reinforcing its commitment to holistic student development.</p>
+            <div class="inst-detail__meta-grid">
+              <div class="inst-meta-box"><span class="label">Affiliation</span><span class="value">University of Rajasthan, Jaipur</span></div>
+              <div class="inst-meta-box"><span class="label">Type</span><span class="value">Co-Educational</span></div>
+              <div class="inst-meta-box"><span class="label">Programmes</span><span class="value">18 UG & PG Programmes</span></div>
+              <div class="inst-meta-box"><span class="label">Streams</span><span class="value">Arts, Science, Commerce</span></div>
+              <div class="inst-meta-box"><span class="label">Phone</span><span class="value"><a href="tel:+919414247984">+91-9414247984</a></span></div>
+              <div class="inst-meta-box"><span class="label">Website</span><span class="value"><a href="http://www.vinayakpg.com" target="_blank">vinayakpg.com</a></span></div>
+            </div>
+            <div class="inst-detail__tags">
+              <span class="inst-tag">UG Programmes</span>
+              <span class="inst-tag">PG Programmes</span>
+              <span class="inst-tag">Arts / Science / Commerce</span>
+              <span class="inst-tag">Library & Labs</span>
+            </div>
+            <a href="courses.html" class="btn btn-navy btn-sm" style="margin-top:20px;display:inline-flex;">View All Courses</a>
+          </div>
+          <div class="inst-detail__image">
+            <!-- Replace with actual college image -->
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=700&auto=format&fit=crop&q=80" alt="Vinayak PG College" />
+          </div>
+        </div>
+      </div>
+
+      <!-- INSTITUTION 4 -->
+      <div class="inst-detail reveal" id="inst-4">
+        <div class="inst-detail__header">
+          <div class="inst-detail__header-left">
+            <span class="inst-detail__number">04</span>
+            <span class="inst-detail__type">Girls' UG + PG Degree College</span>
+            <h2>Vinayak Girls College</h2>
+          </div>
+          <span class="inst-detail__est">Est. 2007</span>
+        </div>
+        <div class="inst-detail__body">
+          <div class="inst-detail__content">
+            <p>Established in 2007 with a focused mission to bring quality higher education closer to the women of Chomu tehsil, Vinayak Girls College offers undergraduate and postgraduate programmes in Arts, Science, and Commerce. With a total sanctioned seat intake of 820, the college provides women with a full degree-level academic environment in a dedicated, supportive setting.</p>
+            <p style="margin-top:12px;">Online fee payment is available through the official website, making the admission and fee process accessible and convenient for students and families.</p>
+            <div class="inst-detail__meta-grid">
+              <div class="inst-meta-box"><span class="label">Affiliation</span><span class="value">University of Rajasthan, Jaipur</span></div>
+              <div class="inst-meta-box"><span class="label">Gender</span><span class="value">Girls Only</span></div>
+              <div class="inst-meta-box"><span class="label">Seat Intake</span><span class="value">820 Seats</span></div>
+              <div class="inst-meta-box"><span class="label">Streams</span><span class="value">Arts, Science, Commerce</span></div>
+              <div class="inst-meta-box"><span class="label">Email</span><span class="value"><a href="mailto:vinayak2@gmail.com">vinayak2@gmail.com</a></span></div>
+              <div class="inst-meta-box"><span class="label">Website</span><span class="value"><a href="http://vinayakgirlscollege.in" target="_blank">vinayakgirlscollege.in</a></span></div>
+            </div>
+            <div class="inst-detail__tags">
+              <span class="inst-tag">Girls Only</span>
+              <span class="inst-tag">820 Seats</span>
+              <span class="inst-tag">UG & PG</span>
+              <span class="inst-tag">Online Fee Payment</span>
+            </div>
+          </div>
+          <div class="inst-detail__image">
+            <!-- Replace with actual college image -->
+            <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efd?w=700&auto=format&fit=crop&q=80" alt="Vinayak Girls College" />
+          </div>
+        </div>
+      </div>
+
+      <!-- INSTITUTION 5 -->
+      <div class="inst-detail reveal" id="inst-5">
+        <div class="inst-detail__header">
+          <div class="inst-detail__header-left">
+            <span class="inst-detail__number">05</span>
+            <span class="inst-detail__type">UG + PG Degree College</span>
+            <h2>Vinayak International College</h2>
+          </div>
+          <span class="inst-detail__est">Est. 2013</span>
+        </div>
+        <div class="inst-detail__body">
+          <div class="inst-detail__content">
+            <p>Vinayak International College, located at Krishana Vihar on Kacholiya Road, Chomu, is a co-educational degree college affiliated to the University of Rajasthan, Jaipur. Established in 2013, the college offers undergraduate and postgraduate programmes in Arts, Science, and Commerce, providing expanded higher education access to students in and around Chomu.</p>
+            <div class="inst-detail__meta-grid">
+              <div class="inst-meta-box"><span class="label">Affiliation</span><span class="value">University of Rajasthan, Jaipur</span></div>
+              <div class="inst-meta-box"><span class="label">Type</span><span class="value">Co-Educational</span></div>
+              <div class="inst-meta-box"><span class="label">Streams</span><span class="value">Arts, Science, Commerce</span></div>
+              <div class="inst-meta-box"><span class="label">Levels</span><span class="value">UG & PG</span></div>
+              <div class="inst-meta-box"><span class="label">Address</span><span class="value">Krishana Vihar, Kacholiya Rd</span></div>
+              <div class="inst-meta-box"><span class="label">PIN</span><span class="value">303702, Chomu, Jaipur</span></div>
+            </div>
+            <div class="inst-detail__tags">
+              <span class="inst-tag">UG & PG</span>
+              <span class="inst-tag">Arts / Science / Commerce</span>
+              <span class="inst-tag">Co-Educational</span>
+              <span class="inst-tag">Kacholiya Road</span>
+            </div>
+          </div>
+          <div class="inst-detail__image">
+            <!-- Replace with actual college image -->
+            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=700&auto=format&fit=crop&q=80" alt="Vinayak International College" />
+          </div>
+        </div>
+      </div>
+
+      <!-- INSTITUTION 6 -->
+      <div class="inst-detail reveal" id="inst-6">
+        <div class="inst-detail__header">
+          <div class="inst-detail__header-left">
+            <span class="inst-detail__number">06</span>
+            <span class="inst-detail__type">CBSE School · English Medium · Day & Boarding</span>
+            <h2>Vinayak International School — Kacholiya Road Campus</h2>
+          </div>
+          <span class="inst-detail__est">Est. 2018</span>
+        </div>
+        <div class="inst-detail__body">
+          <div class="inst-detail__content">
+            <p>The Group's most recent school-level institution, the Kacholiya Road campus of Vinayak International School spans 4,000 square metres and offers CBSE education from Nursery through Class XII. Managed by Vinayak Shri Krishan Sansthan, the school provides a rich co-curricular programme alongside its academic curriculum.</p>
+            <p style="margin-top:12px;">Co-curricular activities include Scouts, Guides, NCC, Hobby Classes, Debate and Discussion, Drama, Educational Tours, Fancy Dress, Story-Telling, Creative Writing, and Cooking Classes — fostering well-rounded development in every student.</p>
+            <div class="inst-detail__meta-grid">
+              <div class="inst-meta-box"><span class="label">Board</span><span class="value">CBSE</span></div>
+              <div class="inst-meta-box"><span class="label">Medium</span><span class="value">English</span></div>
+              <div class="inst-meta-box"><span class="label">Grades</span><span class="value">Nursery to Class XII</span></div>
+              <div class="inst-meta-box"><span class="label">Type</span><span class="value">Co-Ed, Day Cum Boarding</span></div>
+              <div class="inst-meta-box"><span class="label">Campus Area</span><span class="value">4,000 Sq. Metres</span></div>
+              <div class="inst-meta-box"><span class="label">Management</span><span class="value">Vinayak Shri Krishan Sansthan</span></div>
+            </div>
+            <div class="inst-detail__tags">
+              <span class="inst-tag">CBSE Affiliated</span>
+              <span class="inst-tag">Nursery to XII</span>
+              <span class="inst-tag">NCC & Scouts</span>
+              <span class="inst-tag">Boarding Available</span>
+              <span class="inst-tag">Drama & Debate</span>
+            </div>
+          </div>
+          <div class="inst-detail__image">
+            <!-- Replace with actual school image -->
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&auto=format&fit=crop&q=80" alt="Vinayak International School Kacholiya Road" />
+          </div>
+        </div>
+      </div>
+
+      <!-- INSTITUTION 7 -->
+      <div class="inst-detail reveal" id="inst-7">
+        <div class="inst-detail__header">
+          <div class="inst-detail__header-left">
+            <span class="inst-detail__number">07</span>
+            <span class="inst-detail__type">B.Ed Teacher Training · NCTE Approved</span>
+            <h2>Shri Vinayak College of Education</h2>
+          </div>
+          <span class="inst-detail__est">Est. 2021</span>
+        </div>
+        <div class="inst-detail__body">
+          <div class="inst-detail__content">
+            <p>The Group's most recently established institution, Shri Vinayak College of Education is a dedicated teacher training college offering the 2-year Bachelor of Education (B.Ed) programme. Fully approved by the National Council for Teacher Education (NCTE), New Delhi, and the Government of Rajasthan, and affiliated to the University of Rajasthan, Jaipur.</p>
+            <p style="margin-top:12px;">Admission is through the official PTET (Pre Teacher Education Test) Counseling process conducted by the Government of Rajasthan. Fees are charged as per Government of Rajasthan norms, making this an accessible option for aspiring teachers.</p>
+            <div class="inst-detail__meta-grid">
+              <div class="inst-meta-box"><span class="label">Programme</span><span class="value">B.Ed (Bachelor of Education)</span></div>
+              <div class="inst-meta-box"><span class="label">Duration</span><span class="value">2 Years</span></div>
+              <div class="inst-meta-box"><span class="label">Eligibility</span><span class="value">Graduation with min. 50%</span></div>
+              <div class="inst-meta-box"><span class="label">Admission</span><span class="value">PTET Counseling</span></div>
+              <div class="inst-meta-box"><span class="label">Approval</span><span class="value">NCTE, New Delhi + Govt. Rajasthan</span></div>
+              <div class="inst-meta-box"><span class="label">Affiliation</span><span class="value">University of Rajasthan</span></div>
+            </div>
+            <div class="inst-detail__tags">
+              <span class="inst-tag">NCTE Approved</span>
+              <span class="inst-tag">B.Ed — 2 Years</span>
+              <span class="inst-tag">PTET Admission</span>
+              <span class="inst-tag">Govt. Fee Norms</span>
+            </div>
+            <a href="admissions.html#bed-admission" class="btn btn-navy btn-sm" style="margin-top:20px;display:inline-flex;">B.Ed Admission Process</a>
+          </div>
+          <div class="inst-detail__image">
+            <!-- Replace with actual college image -->
+            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=700&auto=format&fit=crop&q=80" alt="Shri Vinayak College of Education" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner">
+        <h2>Find the Right Institution<br />for Your Goals</h2>
+        <p>Explore programmes, check eligibility, and apply for the 2025–26 academic session today.</p>
+        <div class="cta-banner__actions">
+          <a href="courses.html" class="btn btn-primary">Browse Courses</a>
+          <a href="admissions.html" class="btn btn-outline">Admission Process</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="navbar__logo">
+            <div class="navbar__logo-icon"><span>V</span></div>
+            <div class="navbar__logo-text">
+              <span class="name">Vinayak Group</span>
+              <span class="sub">of Education, Chomu</span>
+            </div>
+          </a>
+          <p>Empowering generations through quality education since 1995. Seven institutions. One trusted name. Chomu, Jaipur, Rajasthan.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <div class="footer__links">
+            <a href="index.html">Home</a><a href="about.html">About Us</a>
+            <a href="institutions.html">Institutions</a><a href="courses.html">Courses</a>
+            <a href="admissions.html">Admissions</a><a href="facilities.html">Facilities</a>
+            <a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Institutions</h4>
+          <div class="footer__links">
+            <a href="#inst-1">Vidhya Vihar School</a>
+            <a href="#inst-2">VIS Khadi Bagh</a>
+            <a href="#inst-3">Vinayak PG College</a>
+            <a href="#inst-4">Vinayak Girls College</a>
+            <a href="#inst-5">International College</a>
+            <a href="#inst-6">VIS Kacholiya Road</a>
+            <a href="#inst-7">B.Ed College</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2"/></svg>
+            <a href="tel:+919414247984">+91-9414247984</a>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:vinayakgroup2003@gmail.com">vinayakgroup2003@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom" style="padding:20px 32px;">
+      <p>© 2025 Vinayak Group of Education, Chomu, Jaipur, Rajasthan. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
